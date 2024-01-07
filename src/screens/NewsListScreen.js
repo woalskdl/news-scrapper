@@ -19,7 +19,7 @@ export const NewsListScreen = () => {
         }
     }, [query])
 
-    const newsList = useSelector((state) => state.news.newsList);
+    const newsList = useSelector((state) => state.news.newsList, []);
     
     const onPressListItem = useCallback((newsItem) => {
         navigation.navigate('NewsDetail', {newsItem})
